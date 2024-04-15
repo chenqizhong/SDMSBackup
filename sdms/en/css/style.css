@@ -53,6 +53,7 @@ URL: http://www.bootstrapmb.com
 @import url('jquery.mCustomScrollbar.min.css');
 @import url('tinyscrollbar.css');
 @import url(../fonts/flaticon/flaticon.css);
+@import url(icomoon2.css);
 
 /*** Price filter***/
 @import url(../assets/price-filter/nouislider.css);
