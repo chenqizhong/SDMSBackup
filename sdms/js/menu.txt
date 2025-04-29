@@ -52,7 +52,12 @@
                           </li>
                           <!--<li><a href="#">業務實績</a></li>-->
                           <li><a href="recruiting.html">人才招募</a></li>
-                          <li><a href="contactUs.html">聯絡我們</a></li>
+                          <li><a href="#">聯絡我們</a>
+                            <ul id='ul2'>
+                              <li><a href="contactUs.html">聯絡我們</a></li>
+                              <li><a href="https://visit.sdms.com.tw/index.html" target="_blank">申請訪客證</a></li>
+                            </ul>
+                          </li>
                           <li><a href="en/index.html">EN</a></li>
 
 						  <!--<li class="hidden-pc"><a href="en/index.html">英文版</a></li>-->
