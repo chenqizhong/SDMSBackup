@@ -45,7 +45,12 @@
                           </li>
                           <!--<li><a href="#">Business Scope</a></li>-->
                           <li><a href="recruiting.html">Careers</a></li>
-                          <li><a href="contactUs.html">Contact Us</a></li>
+                          <li><a href="#">Contact Us</a>
+                            <ul id='ul2'> 
+                              <li><a href="contactUs.html">Contact Us</a></li>
+                              <li><a href="https://visit.sdms.com.tw/index.html" target="_blank">Visit Request</a></li>
+                            </ul>
+                          </li>
                           <li class="hidden-pc"><a href="../index.html">Chinese</a></li>
                         </ul>
                       </div>
