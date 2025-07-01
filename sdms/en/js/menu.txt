@@ -68,7 +68,7 @@
               </div>
               <!-- ★ (Phone版)右側：中鋼集團 Logo -->
                 <div class="group-logo" style="align-items: center;">
-                  <img src="/images/CSClogo-group.svg" width="100" height="100" alt="中鋼集團">
+                  <img src="images/csc_logo_e.png" width="100" height="100" alt="中鋼集團">
                 </div>
             </div>
           </div>
@@ -133,7 +133,7 @@
             </section>
              <!-- ★ (PC版)中鋼集團 Logo 區塊 -->
             <div class="csc-logo" style="padding-left: 10px;">
-              <img src="/images/CSClogo-group.svg" alt="中鋼集團"  width="100" height="100" ">
+              <img src="images/csc_logo_e.png" alt="中鋼集團"  width="100" height="100" ">
             </div>
           </div>
           <script>
