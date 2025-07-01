@@ -135,7 +135,7 @@
 
             <!-- ★ (PC版)中鋼集團 Logo 區塊 -->
             <div class="csc-logo" style="padding-left: 10px;">
-              <img src="/images/CSClogo-group.svg" alt="中鋼集團"  width="100" height="100" ">
+              <img src="/images/cscLogo.png" alt="中鋼集團"  width="100" height="100" ">
             </div>
           </div>
 
