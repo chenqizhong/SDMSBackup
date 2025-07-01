@@ -64,9 +64,14 @@
                  
                  shadow:0,
                  spinner:"off",
+                //  關閉首頁幻燈片輪播
                  stopLoop:"on",
                  stopAfterLoops:0,
                  stopAtSlide:1,
+                //  開啟首頁幻燈片輪播
+                //  stopLoop:"off",
+                //  stopAfterLoops:-1,
+                //  stopAtSlide:-1,
                  shuffle:"off",
                  autoHeight:"off",
                  hideThumbsOnMobile:"off",

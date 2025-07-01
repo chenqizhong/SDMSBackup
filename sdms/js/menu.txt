@@ -1,116 +1,182 @@
-﻿<div class="header-top">
+﻿<style>
+   /* 預設（桌機版）：左右排列 */
+  .logo-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  .group-logo {
+    display: none;
+  }
+
+  .logo, .group-logo {
+    flex-shrink: 0;
+  }
+
+
+  .menu-and-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+  }
+
+  /* 讓主選單區塊 (section) 佔滿剩餘空間 */
+  .mainmenu-area {
+    flex-grow: 1;  /* 讓選單區塊能夠擴展 */
+  }
+
+  .csc-logo {
+    margin-top: 10px;
+  }
+
+  /* 手機版：隱藏調調PC版的LOGO，顯示手機版LOGO */
+  @media (max-width: 1197px) {
+    .logo-wrapper {
+      justify-content: center;
+      gap: 20px;
+    }
+  
+    .csc-logo {
+    display: none;
+    }
+ 
+    .group-logo {
+      display: flex;
+    }
+    
+    .menu-and-logo {
+      width: 100%;
+    }
+  }
+</style>
+<div class="header-top">
   <div class="container">
     <div class="row">
       <div class="col-xl-12 col-lg-12 col-md-12">
         <div class="inner-content clearfix">
           <div class="header-middle clearfix text-center">
-            <div class="logo">
-              <a href="index.html">
-                <img src="images/LOGO.png" width="100" height="100" alt="興達海">
-              </a>
+            <div class="logo-wrapper">
+              <!-- ★ 左側：興達海基 Logo -->
+              <div class="logo">
+                <a href="index.html">
+                  <img src="images/LOGO.png" width="100" height="100" alt="興達海基">
+                </a>
+              </div>
+              <!-- ★ (Phone版)右側：中鋼集團 Logo -->
+                <div class="group-logo" style="align-items: center;">
+                  <img src="/images/CSClogo-group.svg" width="100" height="100" alt="中鋼集團">
+                </div>
             </div>
           </div>
-          <section class="mainmenu-area stricky">
-            <div class="container">
-              <div class="row">
-                <div class="col-xl-12 col-lg-12 col-md-12">
-                  <div class="inner-content">
-                    <nav class="main-menu text-center clearfix">
-                      <div class="navbar-header clearfix">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
-                        </button>
-                      </div>
-                      <div class="navbar-collapse collapse clearfix">
-                        <ul class="navigation clearfix">
-                          <!--<li><a href="news.html">最新消息</a></li>-->
-                          <li class="dropdown"><a id="a1" href="#" onclick="doClickEven('block')">認識興達海基</a>
-                            <ul id='ul1'>
-                              <li><a href="about.html">公司發展</a></li>
-                              <li><a href="history.html">公司大事紀</a></li>
-                              <li><a href="ProductionCapacity.html">生產能力</a></li>
-                              <li><a href="TechnologyTransfer.html">技術能力</a></li>
-                            </ul>
-                          </li>
-                          <li class="dropdown"><a id="a3" href="#" onclick="quClickEven('block')">業務範圍</a>
-                           <ul id='ul3'>
-                              <li><a href="business.html">業務簡介</a></li>
-                            </ul>
-                           </li>
-                          <li><a id="a4" href="#" onclick="quClickEven('block')">企業社會責任</a>
-                             <ul id='ul4'>
-                              <li><a href="csr.html">綠能產業與企業ESG</a></li>
-                            </ul>
-                          </li>
-                          <li class="dropdown"><a id="a2" href="#" onclick="quClickEven('block')">工安與品質</a>
+
+          <!-- ★ 主選單區塊與 CSC logo 區塊容器 -->
+          <div class="menu-and-logo" style="display: flex; justify-content: space-between; align-items: center;">   
+          
+            <!-- ★ 主選單區塊開始 -->
+            <section class="mainmenu-area stricky">
+              <div class="container">
+                <div class="row align-items-center" style="display: flex; justify-content: space-between;">
+                  <!-- 左側：選單 -->
+                  <div class="col">
+                    <div class="inner-content">
+                      <nav class="main-menu text-center clearfix">
+                        <div class="navbar-header clearfix">
+                          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                          </button>
+                        </div>
+                        <div class="navbar-collapse collapse clearfix">
+                          <ul class="navigation clearfix">
+                            <li class="dropdown"><a id="a1" href="#" onclick="doClickEven('block')">認識興達海基</a>
+                              <ul id='ul1'>
+                                <li><a href="about.html">公司發展</a></li>
+                                <li><a href="history.html">公司大事紀</a></li>
+                                <li><a href="ProductionCapacity.html">生產能力</a></li>
+                                <li><a href="TechnologyTransfer.html">技術能力</a></li>
+                              </ul>
+                            </li>
+                            <li class="dropdown"><a id="a3" href="#" onclick="mcClickEven('block')">業務範圍</a>
+                              <ul id='ul3'>
+                                <li><a href="business.html">業務簡介</a></li>
+                              </ul>
+                            </li>
+                            <li><a id="a4" href="#" onclick="esgClickEven('block')">企業社會責任</a>
+                              <ul id='ul4'>
+                                <li><a href="csr.html">綠能產業與企業ESG</a></li>
+                              </ul>
+                            </li>
+                            <li class="dropdown"><a id="a2" href="#" onclick="quClickEven('block')">工安與品質</a>
                               <ul id='ul2'>
-                              <li><a href="HSE.html">環安衛</a></li>
-                              <li><a href="quality.html">品質系統認證</a></li>
-                            </ul>
-                          </li>
-                          <!--<li><a href="#">業務實績</a></li>-->
-                          <li><a href="recruiting.html">人才招募</a></li>
-                          <li><a href="#">聯絡我們</a>
-                            <ul id='ul2'>
-                              <li><a href="contactUs.html">聯絡我們</a></li>
-                              <li><a href="https://visit.sdms.com.tw/index.html" target="_blank">申請訪客證</a></li>
-                            </ul>
-                          </li>
-                          <li><a href="en/index.html">EN</a></li>
-
-						  <!--<li class="hidden-pc"><a href="en/index.html">英文版</a></li>-->
-
-                        </ul>
-                      </div>
-                    </nav>
+                                <li><a href="HSE.html">環安衛</a></li>
+                                <li><a href="quality.html">品質系統認證</a></li>
+                              </ul>
+                            </li>
+                            <li><a href="recruiting.html">人才招募</a></li>
+                            <li class="dropdown"><a id="a5" href="#"  onclick="callSdmsClickEven('block')">聯絡我們</a>
+                              <ul id='ul5'>
+                                <li><a href="contactUs.html">聯絡我們</a></li>
+                                <li><a href="https://visit.sdms.com.tw/index.html" target="_blank">申請訪客證</a></li>
+                              </ul>
+                            </li>
+                            <li><a href="en/index.html">EN</a></li>
+                          </ul>
+                        </div>
+                      </nav>
+                    </div>
                   </div>
                 </div>
-                <!--
-				<div class="col-xl-1 col-lg-1 icon">
-                <a href="en/index.html">
-                    <span class="flaticon-internet"></span>
-                  </a>
-                </div>
-				-->
               </div>
+            </section>
+
+            <!-- ★ (PC版)中鋼集團 Logo 區塊 -->
+            <div class="csc-logo" style="padding-left: 10px;">
+              <img src="/images/CSClogo-group.svg" alt="中鋼集團"  width="100" height="100" ">
             </div>
-          </section>
-		  <script>
-		/*認識興達海基*/
-    function doClickEven(str) {
-				if(str == 'block')
-					$("#a1").attr("onclick", "doClickEven('')");
-				else
-					$("#a1").attr("onclick", "doClickEven('block')");
-			    $('#ul1').css('display', str);
-			} 
-    /*工安與品質*/
-     function quClickEven(str) {
-				if(str == 'block')
-					$("#a2").attr("onclick", "quClickEven('')");
-				else
-					$("#a2").attr("onclick", "quClickEven('block')");
-			    $('#ul2').css('display', str);
-			} 
-      /*業務範圍*/
-      function quClickEven(str) {
-				if(str == 'block')
-					$("#a3").attr("onclick", "quClickEven('')");
-				else
-					$("#a3").attr("onclick", "quClickEven('block')");
-			    $('#ul3').css('display', str);
-			} 
-         /*企業社會責任*/
-      function quClickEven(str) {
-				if(str == 'block')
-					$("#a4").attr("onclick", "quClickEven('')");
-				else
-					$("#a4").attr("onclick", "quClickEven('block')");
-			    $('#ul4').css('display', str);
-			} 
-		  </script>
+          </div>
+
+          <!-- ★ JavaScript 點擊控制區 -->
+          <script>
+            function doClickEven(str) {
+              if (str == 'block')
+                $("#a1").attr("onclick", "doClickEven('')");
+              else
+                $("#a1").attr("onclick", "doClickEven('block')");
+              $('#ul1').css('display', str);
+            }
+            function mcClickEven(str) {
+              if (str == 'block')
+                $("#a3").attr("onclick", "mcClickEven('')");
+              else
+                $("#a3").attr("onclick", "mcClickEven('block')");
+              $('#ul3').css('display', str);
+            }
+            function quClickEven(str) {
+              if (str == 'block')
+                $("#a2").attr("onclick", "quClickEven('')");
+              else
+                $("#a2").attr("onclick", "quClickEven('block')");
+              $('#ul2').css('display', str);
+            }
+            function esgClickEven(str) {
+              if (str == 'block')
+                $("#a4").attr("onclick", "esgClickEven('')");
+              else
+                $("#a4").attr("onclick", "esgClickEven('block')");
+              $('#ul4').css('display', str);
+            }
+            function callSdmsClickEven(str) {
+              if (str == 'block')
+                $("#a5").attr("onclick", "callSdmsClickEven('')");
+              else
+                $("#a5").attr("onclick", "callSdmsClickEven('block')");
+              $('#ul5').css('display', str);
+            }
+          </script>
         </div>
       </div>
     </div>

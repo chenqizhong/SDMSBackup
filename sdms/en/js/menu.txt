@@ -1,86 +1,158 @@
-﻿<div class="header-top">
+﻿<style>
+   /* 預設（桌機版）：左右排列 */
+  .logo-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  .group-logo {
+    display: none;
+  }
+
+  .logo, .group-logo {
+    flex-shrink: 0;
+  }
+
+
+  .menu-and-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+  }
+
+  /* 讓主選單區塊 (section) 佔滿剩餘空間 */
+  .mainmenu-area {
+    flex-grow: 1;  /* 讓選單區塊能夠擴展 */
+  }
+
+  .csc-logo {
+    margin-top: 10px;
+  }
+
+  /* 手機版：隱藏調調PC版的LOGO，顯示手機版LOGO */
+  @media (max-width: 1197px) {
+    .logo-wrapper {
+      justify-content: center;
+      gap: 20px;
+    }
+  
+    .csc-logo {
+    display: none;
+    }
+ 
+    .group-logo {
+      display: flex;
+    }
+    
+    .menu-and-logo {
+      width: 100%;
+    }
+  }
+</style>
+
+<div class="header-top">
   <div class="container">
     <div class="row">
       <div class="col-xl-12 col-lg-12 col-md-12">
         <div class="inner-content clearfix">
+
           <div class="header-middle clearfix text-center">
-            <div class="logo">
-              <a href="index.html">
-                <img src="images/LOGO.png" width="100" height="100" alt="SinDa Marine Structure">
-              </a>
+            <div class="logo-wrapper">
+              <!-- ★ 左側：興達海基 Logo -->
+              <div class="logo">
+                <a href="index.html">
+                  <img src="images/LOGO.png" width="100" height="100" alt="興達海基">
+                </a>
+              </div>
+              <!-- ★ (Phone版)右側：中鋼集團 Logo -->
+                <div class="group-logo" style="align-items: center;">
+                  <img src="/images/CSClogo-group.svg" width="100" height="100" alt="中鋼集團">
+                </div>
             </div>
           </div>
-          <section class="mainmenu-area stricky">
-            <div class="container">
-              <div class="row">
-                <div class="col-xl-11 col-lg-11 col-md-12">
-                  <div class="inner-content">
-                    <nav class="main-menu text-center clearfix">
-                      <div class="navbar-header clearfix">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
-                        </button>
-                      </div>
-                      <div class="navbar-collapse collapse clearfix">
-                        <ul class="navigation clearfix">
-                          <!-- <li><a href="news.html">News</a></li> -->
-                          <li class="dropdown"><a id="a1" href="#" onclick="doClickEven('block')">About Us</a>
-                            <ul id='ul1'>
-                              <li><a href="about.html">Company Development</a></li>
-                              <li><a href="history.html">Milestones</a></li>
-                              <li><a href="ProductionCapacity.html">Production Capacity</a></li>
-                              <li><a href="TechnologyTransfer.html">Technology Transfer</a></li>
-                            </ul>
-                          </li>
-                          <li><a href="business.html">Business Lines</a></li>
 
-                          <li><a href="csr.html">CSR</a></li>
-                          <li class="dropdown"><a id="a2" href="#" onclick="quClickEven('block')">HSE & QS</a>
+          <!-- ★ 主選單區塊與 CSC logo 區塊容器 -->
+          <div class="menu-and-logo" style="display: flex; justify-content: space-between; align-items: center;">  
+            <!-- ★ 主選單區塊開始 -->
+            <section class="mainmenu-area stricky">
+              <div class="container">
+                <div class="row">
+                  <div class="col-xl-11 col-lg-11 col-md-12">
+                    <div class="inner-content">
+                      <nav class="main-menu text-center clearfix">
+                        <div class="navbar-header clearfix">
+                          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                          </button>
+                        </div>
+                        <div class="navbar-collapse collapse clearfix">
+                          <ul class="navigation clearfix">
+                            <!-- <li><a href="news.html">News</a></li> -->
+                            <li class="dropdown"><a id="a1" href="#" onclick="doClickEven('block')">About Us</a>
+                              <ul id='ul1'>
+                                <li><a href="about.html">Company Development</a></li>
+                                <li><a href="history.html">Milestones</a></li>
+                                <li><a href="ProductionCapacity.html">Production Capacity</a></li>
+                                <li><a href="TechnologyTransfer.html">Technology Transfer</a></li>
+                              </ul>
+                            </li>
+                            <li><a href="business.html">Business Lines</a></li>
+
+                            <li><a href="csr.html">CSR</a></li>
+                            <li class="dropdown"><a id="a2" href="#" onclick="quClickEven('block')">HSE & QS</a>
+                                <ul id='ul2'> 
+                                <li><a href="HSE.html">Safety and Environment Protection</a></li>
+                                <li><a href="quality.html">Quality</a></li>
+                              </ul>
+                            </li>
+                            <!--<li><a href="#">Business Scope</a></li>-->
+                            <li><a href="recruiting.html">Careers</a></li>
+                            <li><a href="#">Contact Us</a>
                               <ul id='ul2'> 
-                              <li><a href="HSE.html">Safety and Environment Protection</a></li>
-                              <li><a href="quality.html">Quality</a></li>
-                            </ul>
-                          </li>
-                          <!--<li><a href="#">Business Scope</a></li>-->
-                          <li><a href="recruiting.html">Careers</a></li>
-                          <li><a href="#">Contact Us</a>
-                            <ul id='ul2'> 
-                              <li><a href="contactUs.html">Contact Us</a></li>
-                              <li><a href="https://visit.sdms.com.tw/index.html" target="_blank">Visit Request</a></li>
-                            </ul>
-                          </li>
-                          <li class="hidden-pc"><a href="../index.html">Chinese</a></li>
-                        </ul>
-                      </div>
-                    </nav>
+                                <li><a href="contactUs.html">Contact Us</a></li>
+                                <li><a href="https://visit.sdms.com.tw/index.html" target="_blank">Visit Request</a></li>
+                              </ul>
+                            </li>
+                            <li class="hidden-pc"><a href="../index.html">Chinese</a></li>
+                          </ul>
+                        </div>
+                      </nav>
+                    </div>
+                  </div>
+                  <div class="col-xl-1 col-lg-1 icon">
+                    <a href="../index.html">
+                      <span class="flaticon-internet"></span>
+                    </a>
                   </div>
                 </div>
-                <div class="col-xl-1 col-lg-1 icon">
-                  <a href="../index.html">
-                    <span class="flaticon-internet"></span>
-                  </a>
-                </div>
               </div>
+            </section>
+             <!-- ★ (PC版)中鋼集團 Logo 區塊 -->
+            <div class="csc-logo" style="padding-left: 10px;">
+              <img src="/images/CSClogo-group.svg" alt="中鋼集團"  width="100" height="100" ">
             </div>
-          </section>
-		  <script>
-			function doClickEven(str) {
-				if(str == 'block')
-					$("#a1").attr("onclick", "doClickEven('')");
-				else
-					$("#a1").attr("onclick", "doClickEven('block')");
-			    $('#ul1').css('display', str);
-			}
-           function quClickEven(str) {
-				if(str == 'block')
-					$("#a2").attr("onclick", "quClickEven('')");
-				else
-					$("#a2").attr("onclick", "quClickEven('block')");
-			    $('#ul2').css('display', str);
-			} 
-		  </script>
+          </div>
+          <script>
+            function doClickEven(str) {
+              if(str == 'block')
+                $("#a1").attr("onclick", "doClickEven('')");
+              else
+                $("#a1").attr("onclick", "doClickEven('block')");
+                $('#ul1').css('display', str);
+            }
+                function quClickEven(str) {
+              if(str == 'block')
+                $("#a2").attr("onclick", "quClickEven('')");
+              else
+                $("#a2").attr("onclick", "quClickEven('block')");
+                $('#ul2').css('display', str);
+            } 
+          </script>
         </div>
       </div>
     </div>
