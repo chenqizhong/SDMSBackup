@@ -1,0 +1,61 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery複習</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="jQuery.js"></script>
+    <style>
+        #panel,
+        #flip {
+            padding: 5px;
+            text-align: center;
+            background-color: #e5eecc;
+            border: solid 1px #c3c3c3;
+        }
+
+        #panel {
+            padding: 50px;
+            display: none;
+        }
+
+        .numberBall {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border: solid 1px rgb(247, 193, 122);
+            border-radius: 50%;
+            margin: 10px;
+            text-align: center;
+            line-height: 50px;
+        }
+        .ordinary{
+            background-color: rgb(247, 193, 122);
+        }
+        .specialBall{
+            background-color: red;
+            color:white;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div id="flip">測次會中獎</div>
+    <div id="panel">
+        <button id="goGet">隨機抽號</button>
+        <div>
+            <span id="numberBall1" class="numberBall ordinary"></span>
+            <span id="numberBall2" class="numberBall ordinary"></span>
+            <span id="numberBall3" class="numberBall ordinary"></span>
+            <span id="numberBall4" class="numberBall ordinary"></span>
+            <span id="numberBall5" class="numberBall ordinary"></span>
+            <span id="numberBall6" class="numberBall specialBall"></span>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
