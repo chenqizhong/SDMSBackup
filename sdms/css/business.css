@@ -1,5 +1,5 @@
 /* 碼頭營運/場地使用業務css */
-.btn {
+.businessBtn {
   position: relative;
   display: inline-block;
   padding: 10px 12px;
@@ -14,7 +14,7 @@
 }
 
 /* 動畫背景 */
-.btn::before {
+.businessBtn::before {
   content: '';
   position: absolute;
   top: 0;
@@ -28,32 +28,32 @@
 }
 
 /* hover 時展開藍色背景 */
-.btn:hover::before {
+.businessBtn:hover::before {
   width: 100%;
 }
 
 /* 文字區塊設定 */
-.btn span {
+.businessBtn span {
   position: relative;
   z-index: 1;
   transition: color 0.3s ease;
 }
 
 /* 初始：開頭白字 */
-.btn .text-start {
+.businessBtn .text-start {
   color: white;
   padding-left: 5px;
 }
 
 /* 初始：其餘藍字 */
-.btn .text-rest {
+.businessBtn .text-rest {
   color: #083061;
   padding-left: 2px;
 }
 
 /* hover 時全部變白字 */
-.btn:hover .text-start,
-.btn:hover .text-rest {
+.businessBtn:hover .text-start,
+.businessBtn:hover .text-rest {
   color: white;
 }
 
