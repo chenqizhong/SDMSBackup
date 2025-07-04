@@ -1,5 +1,5 @@
 ﻿<style>
-   /* 預設（桌機版）：左右排列 */
+   /* logoCss預設（桌機版）：左右排列 */
   .logo-wrapper {
     display: flex;
     justify-content: space-between;
@@ -51,6 +51,41 @@
       width: 100%;
     }
   }
+
+  /*以下小提示框Css*/
+  .tooltip-btn {
+    position: relative;
+    cursor: pointer;
+    }
+
+  /* Tooltip 樣式 */
+  .tooltip-btn::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 125%; /* 放在按鈕上方 */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #083061;
+    color: #ffffff;
+    padding: 8px 12px;
+    border-radius: 8px;
+    white-space: nowrap;
+    font-size: 14px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.5s ease, transform 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+  }
+
+  /* 滑鼠移上去時顯示 tooltip */
+  .tooltip-btn:hover::after,
+  .tooltip-btn:hover::before {
+    opacity: 1;
+    visibility: visible;
+  }
+
 </style>
 <div class="header-top">
   <div class="container">
@@ -102,7 +137,10 @@
                             </li>
                             <li class="dropdown"><a id="a3" href="#" onclick="mcClickEven('block')">業務範圍</a>
                               <ul id='ul3'>
-                                <li><a href="business.html">業務簡介</a></li>
+                                <li><a href="business.html">離岸再生能源業務</a></li>
+                                <li><a href="business_SteelStructureAndCoating.html">鋼結構/塗裝業務</a></li>
+                                <li><a href="business_TechnicalManpower.html">技術人力服務</a></li>
+                                <li><a href="business_BerthingAndSiteUse.html">碼頭運營/場地使用業務</a></li>
                               </ul>
                             </li>
                             <li><a id="a4" href="#" onclick="esgClickEven('block')">企業社會責任</a>
@@ -123,7 +161,7 @@
                                 <li><a href="https://visit.sdms.com.tw/index.html" target="_blank">申請訪客證</a></li>
                               </ul>
                             </li>
-                            <li><a href="en/index.html">EN</a></li>
+                            <li><a href="en/index.html" class="btn tooltip-btn" data-tooltip="語系">EN</a></li>
                           </ul>
                         </div>
                       </nav>

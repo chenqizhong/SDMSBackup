@@ -57,7 +57,8 @@
         </div>
         <div class="subscribe-form">
           <div class="text">
-            <p>service@sdms.com.tw</p>
+            <p>行政窗口信箱：service@sdms.com.tw</p>
+            <p>業務窗口信箱：sales@sdms.com.tw</p>
           </div>
         </div>
       </div>
