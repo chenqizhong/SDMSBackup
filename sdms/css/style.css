@@ -5823,7 +5823,7 @@ select:focus {
     color: #ffffff;
     font-size: 48px;
     font-weight: 400;
-    line-height: 29px;
+    /* line-height: 29px; */
     text-transform: capitalize;
 }
 
