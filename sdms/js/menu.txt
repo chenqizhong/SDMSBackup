@@ -29,7 +29,7 @@
   }
 
   .csc-logo {
-    margin-top: 10px;
+    margin-top: 20px;
   }
 
   /* 手機版：隱藏調調PC版的LOGO，顯示手機版LOGO */
@@ -52,12 +52,11 @@
     }
   }
 
-  /*以下小提示框Css*/
+  /*以下「語系」提示框Css*/
   .tooltip-btn {
     position: relative;
     cursor: pointer;
     }
-
   /* Tooltip 樣式 */
   .tooltip-btn::after {
     content: attr(data-tooltip);
@@ -78,14 +77,13 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     z-index: 10;
   }
-
+  
   /* 滑鼠移上去時顯示 tooltip */
   .tooltip-btn:hover::after,
   .tooltip-btn:hover::before {
     opacity: 1;
     visibility: visible;
   }
-
 </style>
 <div class="header-top">
   <div class="container">
@@ -161,7 +159,7 @@
                                 <li><a href="https://visit.sdms.com.tw/index.html" target="_blank">申請訪客證</a></li>
                               </ul>
                             </li>
-                            <li><a href="en/index.html" class="btn tooltip-btn" data-tooltip="語系">EN</a></li>
+                            <li><a href="en/index.html" class="tooltip-btn" data-tooltip="語系">EN</a></li>
                           </ul>
                         </div>
                       </nav>
