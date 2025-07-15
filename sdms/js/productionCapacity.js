@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(window).on('load', function () {//等待整個網頁(DOM、img)加載完成再來滾動
     //當onLoad進來時，先讀一下網址，如果有讀到fromBtn=true那代表是從「業務-碼頭營運」導過來的，就可以走一下邏輯
     //onLoad時，先讀網址
     const urlParams = new URLSearchParams(window.location.search);
