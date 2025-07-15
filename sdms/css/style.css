@@ -125,6 +125,10 @@ h3 {
     line-height: 24px;
 }
 
+figcaption h3.show{
+    text-align:center;
+}
+
 h4 {}
 
 a,
