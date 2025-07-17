@@ -125,8 +125,8 @@ h3 {
     line-height: 24px;
 }
 
-figcaption h3.show{
-    text-align:center;
+figcaption h3.show {
+    text-align: center;
 }
 
 h4 {}
@@ -142,6 +142,16 @@ a:focus {
 
 .fix {
     overflow: hidden;
+}
+
+/*圖片版面置中*/
+.image-container {
+  flex-direction: column; /* 讓內容垂直排列 */
+  justify-content: center; /* 垂直置中內容 */
+  align-items: center;     /* 水平置中內容 */
+  text-align: center;      /* 保證文字也水平置中 */
+  padding-top: 45px;
+  padding-bottom: 45px;
 }
 
 img {
@@ -13089,7 +13099,8 @@ select:focus {
     display: block;
     margin-bottom: 20px;
 }
-.goalsTitle{
+
+.goalsTitle {
     font-size: 36px;
 }
 
@@ -13271,13 +13282,16 @@ tr:last-of-type {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.35);
     padding: 20px;
 }
-.opening-hoursP6{
-    margin:0px ;
+
+.opening-hoursP6 {
+    margin: 0px;
 }
-.P-TopBottm{
+
+.P-TopBottm {
     padding-top: 90px;
-    padding-bottom:0px ;
+    padding-bottom: 0px;
 }
+
 .p-t-0 {
     padding-top: 0;
 }
