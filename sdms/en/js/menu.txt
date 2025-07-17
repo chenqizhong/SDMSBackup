@@ -111,8 +111,8 @@
                             </li>
                             <!--<li><a href="#">Business Scope</a></li>-->
                             <li><a href="recruiting.html">Careers</a></li>
-                            <li><a href="#">Contact Us</a>
-                              <ul id='ul2'> 
+                            <li class="dropdown"><a id="a5" href="#"  onclick="callSdmsClickEven('block')">Contact Us</a>
+                              <ul id='ul5'> 
                                 <li><a href="contactUs.html">Contact Us</a></li>
                                 <li><a href="https://visit.sdms.com.tw/index.html" target="_blank">Visit Request</a></li>
                               </ul>
@@ -151,6 +151,13 @@
                 $("#a2").attr("onclick", "quClickEven('block')");
                 $('#ul2').css('display', str);
             } 
+            function callSdmsClickEven(str) {
+              if (str == 'block')
+                $("#a5").attr("onclick", "callSdmsClickEven('')");
+              else
+                $("#a5").attr("onclick", "callSdmsClickEven('block')");
+              $('#ul5').css('display', str);
+            }
           </script>
         </div>
       </div>
