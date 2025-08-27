@@ -143,7 +143,7 @@
                             </li>
                             <li><a id="a4" href="#" onclick="esgClickEven('block')">企業社會責任</a>
                               <ul id='ul4'>
-                                <li><a href="csr.html">綠能產業與企業ESG</a></li>
+                                <li><a href="csr.html">企業永續發展ESG</a></li>
                               </ul>
                             </li>
                             <li class="dropdown"><a id="a2" href="#" onclick="quClickEven('block')">工安與品質</a>
