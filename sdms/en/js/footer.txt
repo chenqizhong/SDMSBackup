@@ -58,6 +58,7 @@
         <div class="subscribe-form">
           <div class="text">
             <p>service@sdms.com.tw</p>
+            <p>sales@sdms.com.tw</p>
           </div>
         </div>
       </div>

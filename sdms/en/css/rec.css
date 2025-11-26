@@ -1,9 +1,10 @@
-.rec-wel li{
+.rec-wel li {
   position: relative;
   padding-left: 25px;
   line-height: 30px;
 }
-.rec-wel li::before{
+
+.rec-wel li::before {
   content: "";
   width: 15px;
   height: 15px;
@@ -13,44 +14,71 @@
   left: 0;
   top: 8px;
 }
-.wel-box{
-  padding-top: 30px;;
+
+.wel-box {
+  padding-top: 30px;
 }
-.wel-box h4{
+/*這是英文版，因為單字常特規設計*/
+
+.wel-box h4 {
   margin-bottom: 20px;
+  padding: 12px 15px;
   border: 1px solid #ccc;
-  padding: 8px 10px;
   font-size: 18px;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  column-gap: 15px;
+  align-items: start;
 }
-.wel-box h4 span{
+
+.wel-box h4 span {
   font-size: 20px;
   color: #fff;
   font-weight: 600;
   padding: 10px 15px;
   margin-right: 15px;
+  margin-bottom: 8px; /*標題和內文的距離*/
+  width: 210px;
 }
-.bg-brown{
+
+.wel-box h4 b {
+  line-height: 1.6;
+}
+
+.bg-brown {
   background: #775e21;
 }
-.bg-green{
+
+.bg-green {
   background: #577d26;
+  padding: 10px 15px;
 }
-.bg-blue{
+
+.bg-blue {
   background: #4394d0;
 }
 .bg-orange{
   background: #dc7e33;
+  padding: 10px 15px;
 }
 .bg-grey{
   background: #9d9d9d;
 }
-@media screen and (max-width:375px){
-  .wel-box h4{
+/* 福利螢幕寬度 */
+/* pc主機 */
+@media screen and (max-width:9999px) {
+  .wel-box h4 {
     position: relative;
-    padding: 8px 10px 8px 150px;
+    padding: 8px 10px 8px 250px;
     min-height: 62px;
   }
-  .wel-box h4 span{
+  .wel-box h4.oneLine {
+    position: relative;
+    padding: 20px 10px 8px 250px;
+    min-height: 62px;
+  }
+
+  .wel-box h4 span {
     padding: 10px;
     margin-right: 10px;
     line-height: 50px;
@@ -58,5 +86,71 @@
     left: 15px;
     top: -5px;
   }
-
 }
+
+/* 平板 */
+@media screen and (max-width:1200px) {
+  .wel-box h4 {
+    position: relative;
+    padding: 8px 10px 8px 150px;
+    min-height: 62px;
+  }
+  .wel-box h4.oneLine {
+    position: relative;
+    padding: 20px 10px 8px 150px;
+    min-height: 62px;
+  }
+
+
+  .wel-box h4.oneLine2 {
+    position: relative;
+    padding: 10px 10px 8px 10px;
+    min-height: 62px;
+  }
+
+  .wel-box h4 span {
+    padding: 10px;
+    margin-right: 10px;
+    line-height: 50px;
+    position: absolute;
+    left: 15px;
+    top: -5px;
+  }
+  .wel-box h4 b{
+    padding-top:60px;
+  }
+}
+
+/* 手機版 */
+@media screen and (max-width:680px) {
+  .wel-box h4 {
+    position: relative;
+    padding: 8px 10px 8px 150px;
+    min-height: 62px;
+  }
+  .wel-box h4.oneLine {
+    position: relative;
+    padding: 20px 10px 8px 150px;
+    min-height: 62px;
+  }
+
+
+  .wel-box h4.oneLine2 {
+    position: relative;
+    padding: 10px 10px 8px 10px;
+    min-height: 62px;
+  }
+
+  .wel-box h4 span {
+    padding: 10px;
+    margin-right: 10px;
+    line-height: 50px;
+    position: absolute;
+    left: 15px;
+    top: -5px;
+  }
+  .wel-box h4 b{
+    padding-top:60px;
+  }
+}
+

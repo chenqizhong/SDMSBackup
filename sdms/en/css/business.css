@@ -1,0 +1,59 @@
+/* 碼頭營運/場地使用業務css */
+.businessBtn {
+  position: relative;
+  display: inline-block;
+  padding: 10px 12px;
+  border: none;
+  background-color: white;
+  border-radius: 50px;
+  overflow: hidden;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* 動畫背景 */
+.businessBtn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 52px; /* 初始小藍色塊 */
+  height: 100%;
+  background-color: #083061;
+  border-radius: 50px;
+  transition: width 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  z-index: 0;
+}
+
+/* hover 時展開藍色背景 */
+.businessBtn:hover::before {
+  width: 100%;
+}
+
+/* 文字區塊設定 */
+.businessBtn span {
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+/* 初始：開頭白字 */
+.businessBtn .text-start {
+  color: white;
+  padding-left: 5px;
+}
+
+/* 初始：其餘藍字 */
+.businessBtn .text-rest {
+  color: #083061;
+  padding-left: 2px;
+}
+
+/* hover 時全部變白字 */
+.businessBtn:hover .text-start,
+.businessBtn:hover .text-rest {
+  color: white;
+}
+
