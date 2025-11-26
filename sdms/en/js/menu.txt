@@ -1,5 +1,5 @@
 ﻿<style>
-   /* 預設（桌機版）：左右排列 */
+   /* logoCss預設（桌機版）：左右排列 */
   .logo-wrapper {
     display: flex;
     justify-content: space-between;
@@ -29,7 +29,7 @@
   }
 
   .csc-logo {
-    margin-top: 10px;
+    margin-top: 20px;
   }
 
   /* 手機版：隱藏調調PC版的LOGO，顯示手機版LOGO */
@@ -50,6 +50,39 @@
     .menu-and-logo {
       width: 100%;
     }
+  }
+
+  /*以下「語系」提示框Css*/
+  .tooltip-btn {
+    position: relative;
+    cursor: pointer;
+    }
+  /* Tooltip 樣式 */
+  .tooltip-btn::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 125%; /* 放在按鈕上方 */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #083061;
+    color: #ffffff;
+    padding: 8px 12px;
+    border-radius: 8px;
+    white-space: nowrap;
+    font-size: 14px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.5s ease, transform 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+  }
+  
+  /* 滑鼠移上去時顯示 tooltip */
+  .tooltip-btn:hover::after,
+  .tooltip-btn:hover::before {
+    opacity: 1;
+    visibility: visible;
   }
 </style>
 
@@ -100,9 +133,21 @@
                                 <li><a href="TechnologyTransfer.html">Technology Transfer</a></li>
                               </ul>
                             </li>
-                            <li><a href="business.html">Business Lines</a></li>
+                            <li class="dropdown"><a id="a3" href="#" onclick="mcClickEven('block')">Business Lines</a>
+                              <ul id='ul3'>
+                                  <li><a href="business.html">Renewable Energy</a></li>
+                                  <li><a href="business_SteelStructureAndCoating.html">Steel Structure & Coating</a></li>
+                                  <li><a href="business_TechnicalManpower.html">Technical Manpower</a></li>
+                                  <li><a href="business_BerthingAndSiteUse.html">Berthing & Site Use</a></li>
+                                </ul>
+                            </li>
 
-                            <li><a href="csr.html">CSR</a></li>
+                            <li><a id="a4" href="#" onclick="esgClickEven('block')">CSR</a>
+                              <ul id='ul4'>
+                                <li><a href="csr.html">Corporate Sustainable Development</a></li>
+                              </ul>
+                            </li>
+
                             <li class="dropdown"><a id="a2" href="#" onclick="quClickEven('block')">HSE & QS</a>
                                 <ul id='ul2'> 
                                 <li><a href="HSE.html">Safety and Environment Protection</a></li>
@@ -136,21 +181,37 @@
               <img src="images/csc_logo_e.png" alt="中鋼集團"  width="100" height="100" ">
             </div>
           </div>
+          
+           <!-- ★ JavaScript 點擊控制區 -->
           <script>
             function doClickEven(str) {
-              if(str == 'block')
+              if (str == 'block')
                 $("#a1").attr("onclick", "doClickEven('')");
               else
                 $("#a1").attr("onclick", "doClickEven('block')");
-                $('#ul1').css('display', str);
+              $('#ul1').css('display', str);
             }
-                function quClickEven(str) {
-              if(str == 'block')
+            function mcClickEven(str) {
+              if (str == 'block')
+                $("#a3").attr("onclick", "mcClickEven('')");
+              else
+                $("#a3").attr("onclick", "mcClickEven('block')");
+              $('#ul3').css('display', str);
+            }
+            function quClickEven(str) {
+              if (str == 'block')
                 $("#a2").attr("onclick", "quClickEven('')");
               else
                 $("#a2").attr("onclick", "quClickEven('block')");
-                $('#ul2').css('display', str);
-            } 
+              $('#ul2').css('display', str);
+            }
+            function esgClickEven(str) {
+              if (str == 'block')
+                $("#a4").attr("onclick", "esgClickEven('')");
+              else
+                $("#a4").attr("onclick", "esgClickEven('block')");
+              $('#ul4').css('display', str);
+            }
             function callSdmsClickEven(str) {
               if (str == 'block')
                 $("#a5").attr("onclick", "callSdmsClickEven('')");
@@ -158,7 +219,8 @@
                 $("#a5").attr("onclick", "callSdmsClickEven('block')");
               $('#ul5').css('display', str);
             }
-          </script>
+          </script> 
+
         </div>
       </div>
     </div>

@@ -147,7 +147,7 @@ a:focus {
 /*圖片版面置中*/
 .image-container {
   flex-direction: column; /* 讓內容垂直排列 */
-  justify-content: center; /* 垂直置中內容 */
+  justify-content: center; /* 垂直置中內容 */ 
   align-items: center;     /* 水平置中內容 */
   text-align: center;      /* 保證文字也水平置中 */
   padding-top: 45px;

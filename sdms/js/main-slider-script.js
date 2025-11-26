@@ -29,7 +29,7 @@
                     },
                     arrows: {
                         style:"uranus",
-                        enable:true,
+                        enable: false,//false=關閉更換按鈕/true=開啟更換按鈕
                         hide_onmobile:true,
                         hide_under:600,
                         hide_onleave:false,
